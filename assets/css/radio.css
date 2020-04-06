@@ -1,0 +1,47 @@
+/* =============================================
+* RADIO BUTTONS
+=============================================== */
+.gicon {
+  height: 40px;
+  width: 40px;
+}
+#radios label {
+  cursor: pointer;
+}
+
+.gen {
+  opacity: 0; /* hidden but still tabable */
+}
+
+.gen + .radspan {
+  border-radius: 100%;
+  padding: 12px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+}
+
+/* .gen:checked + .radspan {
+  color: #d9e7fd;
+  background-color: #fd8469;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+} */
+
+.gen:focus + .radspan {
+  color: #fff;
+}
+
+/* ================ TOOLTIPS ================= */
+
+#radios label:hover::before {
+  content: attr(for);
+  font-family: Roboto, -apple-system, sans-serif;
+  text-transform: capitalize;
+  font-size: 11px;
+  opacity: 0.75;
+  background-color: #323232;
+  color: #fff;
+  padding: 4px;
+  border-radius: 3px;
+  display: block;
+}

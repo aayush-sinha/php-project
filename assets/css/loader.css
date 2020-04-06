@@ -1,0 +1,180 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 404px;
+  height: 100%;
+  max-height: 120px;
+}
+.node {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  width: 20px;
+  margin: 0 5px;
+}
+.node:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #f4551f;
+  border-radius: 50%;
+}
+.node:after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #2ce8fa;
+  border-radius: 50%;
+  animation: bounce-node-2 5s infinite;
+}
+.node:nth-child(1):before {
+  animation: bounce-node 2s 100ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(1):after {
+  animation: bounce-node-2 2s 100ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(2):before {
+  animation: bounce-node 2s 200ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(2):after {
+  animation: bounce-node-2 2s 200ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(3):before {
+  animation: bounce-node 2s 300ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(3):after {
+  animation: bounce-node-2 2s 300ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(4):before {
+  animation: bounce-node 2s 400ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(4):after {
+  animation: bounce-node-2 2s 400ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(5):before {
+  animation: bounce-node 2s 500ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(5):after {
+  animation: bounce-node-2 2s 500ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(6):before {
+  animation: bounce-node 2s 600ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(6):after {
+  animation: bounce-node-2 2s 600ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(7):before {
+  animation: bounce-node 2s 700ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(7):after {
+  animation: bounce-node-2 2s 700ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(8):before {
+  animation: bounce-node 2s 800ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(8):after {
+  animation: bounce-node-2 2s 800ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(9):before {
+  animation: bounce-node 2s 900ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(9):after {
+  animation: bounce-node-2 2s 900ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(10):before {
+  animation: bounce-node 2s 1000ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(10):after {
+  animation: bounce-node-2 2s 1000ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(11):before {
+  animation: bounce-node 2s 1100ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(11):after {
+  animation: bounce-node-2 2s 1100ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(12):before {
+  animation: bounce-node 2s 1200ms infinite cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+.node:nth-child(12):after {
+  animation: bounce-node-2 2s 1200ms infinite
+    cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+@keyframes bounce-node {
+  0% {
+    top: 1px;
+    transform: scale(1);
+    background-color: #f4551f;
+    z-index: 0;
+  }
+  25% {
+    transform: scale(0.75);
+  }
+  50% {
+    top: calc(100% - 10px);
+    transform: scale(1);
+    background-color: #faeb43;
+    z-index: 1;
+  }
+  75% {
+    transform: scale(1.25);
+    z-index: 1;
+  }
+  100% {
+    top: 1px;
+    transform: scale(1);
+    background-color: #f4551f;
+    z-index: 1;
+  }
+}
+@keyframes bounce-node-2 {
+  0% {
+    bottom: 1px;
+    transform: scale(1);
+    background-color: #2ce8fa;
+    z-index: 1;
+  }
+  25% {
+    transform: scale(1.25);
+  }
+  50% {
+    bottom: calc(100% - 10px);
+    transform: scale(1);
+    background-color: #1a7df6;
+    z-index: 0;
+  }
+  75% {
+    transform: scale(0.75);
+    z-index: 0;
+  }
+  100% {
+    bottom: 1px;
+    transform: scale(1);
+    background-color: #2ce8fa;
+    z-index: 0;
+  }
+}
+.title {
+  display: block;
+  padding-top: 40px;
+  font-family: sans-serif;
+  text-align: center;
+}
